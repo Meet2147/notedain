@@ -1,117 +1,42 @@
-/* General Styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+.download-buttons img {
+    max-width: 150px; /* Set a maximum width */
+    height: auto;     /* Maintain aspect ratio */
+    display: block;   /* Ensures proper alignment */
+    margin: 0 auto;   /* Centers the image */
 }
 
-header {
-    background-color: #f8f8f8;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.logo img {
-    width: 120px;
-}
-
-nav {
-    position: relative;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    margin: 0;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.hero {
-    text-align: center;
-    padding: 2rem;
-    background-color: #e0f7fa;
-}
-
-.hero-content h1 {
-    font-size: 2rem;
-    margin: 1rem 0;
-}
-
-.hero-content p {
-    font-size: 1rem;
-    color: #555;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
-    background-color: #00796b;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.screenshots {
+.download-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
     justify-content: center;
-    margin-top: 2rem;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-.screenshot {
-    max-width: 200px;
-    width: 100%;
-    border-radius: 8px;
+.button {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #fff; /* Add a background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a clean look */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
+.android {
+    background-color: #4caf50;
+    color: white;
+}
 
-    .nav-links {
-        flex-direction: column;
-        gap: 0;
-        background-color: #f8f8f8;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        display: none;
-        padding: 1rem 0;
-    }
+.ios {
+    background-color: #ccc;
+    color: #fff;
+}
 
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li a {
-        padding: 0.5rem 2rem;
-        display: block;
-        text-align: center;
-    }
+.ios.disabled {
+    pointer-events: none;
+    background-color: #ddd;
 }
