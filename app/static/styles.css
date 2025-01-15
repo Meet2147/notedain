@@ -1,160 +1,76 @@
-/* General Styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-header {
-    background-color: #f8f8f8;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.logo img {
-    width: 120px;
-}
-
-nav {
-    position: relative;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    margin: 0;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.hero {
+/* Download Section */
+.download {
     text-align: center;
-    padding: 2rem;
-    background-color: #e0f7fa;
-}
-
-.hero-content h1 {
-    font-size: 2rem;
-    margin: 1rem 0;
-}
-
-.hero-content p {
-    font-size: 1rem;
-    color: #555;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
-    background-color: #00796b;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #9fb4ff, #ff9cee); /* Matching the theme */
     color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
 }
 
-.screenshots {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
+.download h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
 }
 
-.screenshot {
-    max-width: 200px;
-    width: 100%;
-    border-radius: 8px;
-}
-
-.download-buttons img {
-    max-width: 150px; /* Set a maximum width */
-    height: auto;     /* Maintain aspect ratio */
-    display: block;   /* Ensures proper alignment */
-    margin: 0 auto;   /* Centers the image */
+.download p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: #fefefe;
 }
 
 .download-buttons {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .button {
-    display: inline-flex;
-    flex-direction: column;
+    display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 10px;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    background: #ffffff;
+    color: #6c63ff; /* Purple */
+    padding: 12px 20px;
+    font-size: 1rem;
     font-weight: bold;
-    background-color: #fff; /* Add a background color */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a clean look */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.android {
-    background-color: #4caf50;
-    color: white;
+.button img {
+    width: 20px;
+    height: 20px;
 }
 
-.ios {
-    background-color: #ccc;
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button.android {
+    background: #32de84; /* Play Store green */
     color: #fff;
 }
 
-.ios.disabled {
-    pointer-events: none;
-    background-color: #ddd;
+.button.android:hover {
+    background: #28a665;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
+.button.ios {
+    background: #007bff; /* App Store blue */
+    color: #fff;
+}
 
-    .nav-links {
-        flex-direction: column;
-        gap: 0;
-        background-color: #f8f8f8;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        display: none;
-        padding: 1rem 0;
-    }
+.button.ios.disabled {
+    background: #ccc; /* Grey for disabled state */
+    pointer-events: none;
+    cursor: not-allowed;
+}
 
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li a {
-        padding: 0.5rem 2rem;
-        display: block;
-        text-align: center;
-    }
+.button.ios:hover {
+    background: #0056b3;
 }
