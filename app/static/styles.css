@@ -1,3 +1,92 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    width: 120px;
+}
+
+nav {
+    position: relative;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e0f7fa;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    background-color: #00796b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.screenshot {
+    max-width: 200px;
+    width: 100%;
+    border-radius: 8px;
+}
+
 .download-buttons img {
     max-width: 150px; /* Set a maximum width */
     height: auto;     /* Maintain aspect ratio */
@@ -39,4 +128,33 @@
 .ios.disabled {
     pointer-events: none;
     background-color: #ddd;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0;
+        background-color: #f8f8f8;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        padding: 1rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li a {
+        padding: 0.5rem 2rem;
+        display: block;
+        text-align: center;
+    }
 }
